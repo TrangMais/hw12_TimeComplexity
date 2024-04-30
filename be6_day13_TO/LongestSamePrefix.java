@@ -4,17 +4,15 @@ package be6_day13_TO;
 
 public class LongestSamePrefix {
 	public static String smallestString(String[] str) {
-        //Keep track of the shortest word by index and length
-        int index = 0, minLength = str[0].length();
-        for (int i = 1; i < str.length; i++){
-            //if the next string is smaller in length then we save that index and length in our variables
-            if(str[i].length() < minLength){
+        int index = 0;
+        int minLength = str[0].length();
+        for (int i = 1; i < str.length; i++){				//Keep track of the shortest word by index and length
+            if(str[i].length() < minLength){				//if the next string is smaller in length then we save that index and length in our variables
                 index = i;
                 minLength = str[i].length();  
             }           
         }
-        //returns the smallest word
-        return str[index];
+        return str[index];									//returns the smallest word
     }
 	
 	public static String findLongestSamePrefix(String[] str){
